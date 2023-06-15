@@ -1,0 +1,7 @@
+name: "AWS Copilot Action"
+author: "ShivamBh"
+description: "A github action to automate or include AWS copilot commands into your workflows"
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
