@@ -2,10 +2,10 @@
   "name": "gh-action-aws-copilot",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc",
+    "package": "ncc build --source-map --license licenses.txt"
   },
   "keywords": [],
   "author": "Shivam Bhattacharjee",
@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/http-client": "^2.1.0",
     "@actions/tool-cache": "^2.0.1"
   }
 }
