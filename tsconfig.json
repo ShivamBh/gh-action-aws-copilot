@@ -6,13 +6,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
+    "outDir": "build",
     "lib": ["esnext"]
   },
-  "references": [
-    {
-      "path": "./tsconfig.build.json"
-    }
-  ],
-  "exclude": ["node_modules"]
+  "types": ["node"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts", "src/example.ts"]
 }
