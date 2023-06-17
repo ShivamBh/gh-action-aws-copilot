@@ -2,6 +2,34 @@ name: "AWS Copilot Action"
 author: "ShivamBh"
 description: "A github action to integrate AWS copilot commands into your workflows"
 
+inputs:
+  entity:
+    required: true
+    description: "copilot entity to run commands against(Ex: app, svc, env, job, secret)"
+  command:
+    required: true
+    description: "command to use with the copilot entity(Ex: copilot svc deploy, where entity:svc and command:deploy)"
+    default: "install"
+  app:
+    required: false
+    description: "copilot application name"
+  service:
+    required: false
+    description: "copilot service name"
+  env:
+    required: false
+    description: "copilot environment name"
+  force:
+    required: false
+    default: "false"
+    description: "run force"
+  path:
+    required: false
+    description: "path name"
+  useCliVersion:
+    required: false
+    description: "Specify version of Copilot CLI to use"
+
 runs:
   using: "node16"
   main: "dist/index.js"
